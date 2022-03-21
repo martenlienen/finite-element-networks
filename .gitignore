@@ -1,0 +1,9 @@
+# Python artifacts
+__pycache__
+
+# Data
+/data
+/checkpoints
+
+# Pytorch Lightning
+lightning_logs

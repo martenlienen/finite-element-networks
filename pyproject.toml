@@ -1,0 +1,73 @@
+[build-system]
+requires = ["flit_core ~= 3.5"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "finite-element-networks"
+dynamic = ["version", "description"]
+readme = "README.md"
+requires-python = ">= 3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Marten Lienen", email = "marten.lienen@in.tum.de"}]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python"
+]
+dependencies = [
+  "numpy ~= 1.19",
+  "scipy ~= 1.7",
+  "scikit-fem ~= 5.2",
+  "einops ~= 0.4",
+  "torch ~= 1.10",
+  "torchdiffeq ~= 0.2.2",
+  "torch-scatter ~= 2.0",
+  "torchtyping",
+  "cachetools ~= 5.0",
+  "matplotlib ~= 3.5",
+  "Pillow ~= 9.0"
+]
+
+[project.optional-dependencies]
+lightning = [
+  "pytorch-lightning ~= 1.5",
+  "torchmetrics",
+  "tqdm",
+  "scikit-learn-extra",
+  "more-itertools",
+
+  # Cylinder Flow
+  "requests",
+  "tfrecord_lite",
+
+  # Black Sea
+  "motuclient",
+  "xarray",
+  "netCDF4",
+  "dask",
+]
+wandb = ["wandb"]
+test = ["pytest"]
+
+[project.urls]
+homepage = "https://github.com/martenlienen/finite-element-networks"
+
+[tool.flit.module]
+name = "finite_element_networks"
+
+[tool.flit.sdist]
+exclude = ["tests/"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+known_first_party = ["finite_element_networks"]
+known_third_party = ["wandb"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
