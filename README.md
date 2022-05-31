@@ -22,6 +22,10 @@ git clone https://github.com/martenlienen/finite-element-networks
 # Change into the repository
 cd finite-element-networks
 
+# Make sure that a recent version of pip is available that supports PEP 518 projects
+# with a pyproject.toml
+pip install --upgrade pip
+
 # Install the code as a local package
 pip install --editable .
 ```
