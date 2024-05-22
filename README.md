@@ -83,7 +83,7 @@ provide](finite_element_networks/lightning/data).
 If you build upon this work, please cite our paper as follows.
 
 ```
-@inproceedings{lienen_fen2022,
+@inproceedings{lienen2022fen,
   title = {Learning the Dynamics of Physical Systems from Sparse Observations with Finite Element Networks},
   author = {Lienen, Marten and G\"unnemann, Stephan},
   booktitle={International Conference on Learning Representations (ICLR)},

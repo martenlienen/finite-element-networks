@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: finite-element-networks
+type: software
+authors:
+  - given-names: Marten
+    family-names: Lienen
+    email: m.lienen@tum.de
+  - given-names: Stephan
+    family-names: Günnemann
+    email: s.guennemann@tum.de
+repository-code: "https://github.com/martenlienen/finite-element-networks"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Learning the Dynamics of Physical Systems from Sparse Observations with Finite Element Networks"
+  authors:
+    - given-names: Marten
+      family-names: Lienen
+      email: m.lienen@tum.de
+    - given-names: Stephan
+      family-names: Günnemann
+      email: s.guennemann@tum.de
+  collection-title: "International Conference on Learning Representations (ICLR)"
+  year: 2022
+  url: "https://openreview.net/forum?id=HFmAukZ-k-2"
